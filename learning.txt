@@ -1,0 +1,17 @@
+
+using the jinja template to get variables and adding logical statements in the html file
+{{}} -> variables
+{%%} -> logical statements
+
+TEMPLATE INHERITANCE - 
+from base.html inheriting in home.html
+
+in home.html
+{% extends 'base.html' %}
+{% block NAME_OF_BLOCK %}
+our content unique to home.html
+{% endblock %}
+
+in base.html, wherever the unique code has to come ther we will write
+{% block NAME_OF_BLOCK %}
+{% endblock %}
