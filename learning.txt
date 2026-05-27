@@ -41,3 +41,10 @@ in the python shell:
 
 >>> with app.app_context():
 ...     Item.query.all()
+
+
+
+RESTRUCTURING:
+will create all files neatly
+prevent circular imports -> packaging __init__
+python runs __init__ before any other
