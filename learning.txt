@@ -43,8 +43,17 @@ in the python shell:
 ...     Item.query.all()
 
 
+you can write all the sql code in a python (seed.py)
+then run all 
+
 
 RESTRUCTURING:
 will create all files neatly
 prevent circular imports -> packaging __init__
 python runs __init__ before any other
+
+FORMS:
+using forms to collect all details in register.html
+creating a secret key
+>>> os.urandom(12).hex()
+'cfc097cbfff76668a99ec072'
