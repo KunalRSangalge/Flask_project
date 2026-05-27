@@ -15,3 +15,9 @@ our content unique to home.html
 in base.html, wherever the unique code has to come ther we will write
 {% block NAME_OF_BLOCK %}
 {% endblock %}
+
+navigating to another page:
+href="/home" -> ok but hardcoding not good
+href="{{ url_for('market_page') }}  -> best practise to call the function 
+
+
