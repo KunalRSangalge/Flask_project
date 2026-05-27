@@ -3,6 +3,8 @@ using the jinja template to get variables and adding logical statements in the h
 {{}} -> variables
 {%%} -> logical statements
 
+
+
 TEMPLATE INHERITANCE - 
 from base.html inheriting in home.html
 
@@ -21,3 +23,21 @@ href="/home" -> ok but hardcoding not good
 href="{{ url_for('market_page') }}  -> best practise to call the function 
 
 
+
+DATABASE - SQLAlchemy , sqlite
+uniform resource identifier(URI) 
+
+in the python shell:
+>>> from market import app, db
+
+>>> with app.app_context():
+...     db.create_all()
+
+>>> item1 = Item(name="iphone16",price=1000,barcode="121212121212",description="hello lol")
+
+>>> with app.app_context():
+...     db.session.add(item1)
+...     db.session.commit()
+
+>>> with app.app_context():
+...     Item.query.all()
