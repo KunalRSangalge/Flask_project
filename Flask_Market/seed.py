@@ -1,3 +1,6 @@
+#initialising the database
+#ran this before register
+
 from market import app, db
 from market.models import User, Item
 

@@ -57,3 +57,13 @@ using forms to collect all details in register.html
 creating a secret key
 >>> os.urandom(12).hex()
 'cfc097cbfff76668a99ec072'
+
+handling forms with methods GET, POST
+
+(CSRF) CROSS SITE REQUEST FORGERY
+attacks to the database
+
+solution: in register.html
+{{ form.hidden_tag() }}
+
+Done flask validations with built in classes for registration process
