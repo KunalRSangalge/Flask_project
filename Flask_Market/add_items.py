@@ -2,163 +2,94 @@ from market import app, db
 from market.models import User, Item
 
 with app.app_context():
-
-    # Get users
-    kunal = User.query.filter_by(username="kunal").first()
-    alex = User.query.filter_by(username="alex").first()
-    bot = User.query.filter_by(username="bot").first()
-    kunal2 = User.query.filter_by(username="kunal2").first()
+    
 
     items = [
 
-        # Owned by kunal
+        # Owned by user id 4
         Item(
-            name="MacBook",
-            price=2500,
-            barcode="444444444444",
-            description="Apple laptop",
-            owner=kunal.id
+            name="Drone",
+            price=900,
+            barcode="818181818181",
+            description="Camera drone",
+            owner=4
         ),
 
         Item(
-            name="AirPods",
-            price=300,
-            barcode="555555555555",
-            description="Wireless earbuds",
-            owner=kunal.id
+            name="VR Headset",
+            price=500,
+            barcode="828282828282",
+            description="Virtual reality headset",
+            owner=4
         ),
 
-        # Owned by alex
+        # Owned by user id 5
         Item(
-            name="Monitor",
-            price=400,
-            barcode="666666666666",
-            description="27 inch monitor",
-            owner=alex.id
-        ),
-
-        Item(
-            name="Mouse",
-            price=80,
-            barcode="777777777777",
-            description="Gaming mouse",
-            owner=alex.id
-        ),
-
-        # Owned by bot
-        Item(
-            name="Tablet",
-            price=600,
-            barcode="888888888888",
-            description="Android tablet",
-            owner=bot.id
+            name="Smart TV",
+            price=1300,
+            barcode="838383838383",
+            description="55 inch smart television",
+            owner=5
         ),
 
         Item(
-            name="Speaker",
-            price=200,
-            barcode="999999999999",
-            description="Bluetooth speaker",
-            owner=bot.id
-        ),
-
-        # Owned by kunal2
-        Item(
-            name="Camera",
-            price=1200,
-            barcode="121212121212",
-            description="DSLR Camera",
-            owner=kunal2.id
-        ),
-
-        Item(
-            name="Printer",
-            price=350,
-            barcode="343434343434",
-            description="Color printer",
-            owner=kunal2.id
-        ),
-
-        # Unowned items
-        Item(
-            name="PS5",
-            price=700,
-            barcode="565656565656",
-            description="PlayStation 5",
-            owner=None
-        ),
-
-        Item(
-            name="Xbox",
-            price=650,
-            barcode="787878787878",
-            description="Xbox Series X",
-            owner=None
-        ),
-
-        Item(
-            name="Smart Watch",
+            name="Coffee Machine",
             price=250,
-            barcode="909090909090",
-            description="Fitness smartwatch",
-            owner=None
+            barcode="848484848484",
+            description="Automatic coffee maker",
+            owner=5
+        ),
+
+        # Owned by user id 6
+        Item(
+            name="Gaming Chair",
+            price=450,
+            barcode="858585858585",
+            description="Ergonomic gaming chair",
+            owner=6
         ),
 
         Item(
-            name="Headphones",
-            price=180,
-            barcode="101010101010",
-            description="Noise cancelling headphones",
-            owner=None
-        ),
-
-        Item(
-            name="Microphone",
-            price=140,
-            barcode="202020202020",
-            description="USB microphone",
-            owner=None
-        ),
-
-        Item(
-            name="Desk Lamp",
-            price=60,
-            barcode="303030303030",
-            description="LED desk lamp",
-            owner=None
-        ),
-
-        Item(
-            name="Router",
-            price=110,
-            barcode="404040404040",
-            description="WiFi router",
-            owner=None
-        ),
-
-        Item(
-            name="SSD",
+            name="Mechanical Keyboard Pro",
             price=220,
-            barcode="505050505050",
-            description="1TB SSD",
-            owner=None
+            barcode="868686868686",
+            description="RGB mechanical keyboard",
+            owner=6
+        ),
+
+        # Owned by user id 7
+        Item(
+            name="Projector",
+            price=750,
+            barcode="878787878787",
+            description="Full HD projector",
+            owner=7
         ),
 
         Item(
-            name="Graphics Card",
-            price=1500,
-            barcode="606060606060",
-            description="RTX graphics card",
-            owner=None
+            name="Electric Scooter",
+            price=1800,
+            barcode="888989898989",
+            description="Battery powered scooter",
+            owner=7
+        ),
+
+        # Owned by user id 8
+        Item(
+            name="External HDD",
+            price=160,
+            barcode="898989898989",
+            description="2TB external hard drive",
+            owner=8
         ),
 
         Item(
-            name="Webcam",
-            price=90,
-            barcode="707070707070",
-            description="HD webcam",
-            owner=None
-        )
+            name="Fitness Band",
+            price=120,
+            barcode="919191919191",
+            description="Health tracking band",
+            owner=8
+        ),
     ]
 
     db.session.add_all(items)
