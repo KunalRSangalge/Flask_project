@@ -70,3 +70,19 @@ Done flask validations with built in classes for registration process
 
 USER AUTHENTICATION:
 hashing passwords using getter and setter
+
+Login: flask-login
+
+check if username is same in database
+
+Exception: Missing user_loader or request_loader. Refer to http://flask-login.readthedocs.io/#how-it-works for more info.
+for login we need the following clases specified in user class:
+is_authenticated
+is_active
+is_anonymous
+get_id
+
+but, we will use the mixins class which has all these, then inherit
+
+After this, make frontend changes for better user experience
+
