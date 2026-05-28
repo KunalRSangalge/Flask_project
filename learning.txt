@@ -67,3 +67,6 @@ solution: in register.html
 {{ form.hidden_tag() }}
 
 Done flask validations with built in classes for registration process
+
+USER AUTHENTICATION:
+hashing passwords using getter and setter
