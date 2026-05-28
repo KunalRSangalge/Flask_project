@@ -91,3 +91,10 @@ access of market page only after login
 solved using login_manager
 but after creating/registering acc -> need to login same -> direct login
 fixed that
+
+MODALS: bootstrap
+focuses on looks and all 
+beautify market 
+
+fixing MoreInfo button - item_modal unique for every item and checking description
+fixing the purchaseitem button - form for purachasing current item
