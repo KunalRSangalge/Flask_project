@@ -1,0 +1,9 @@
+running this using docker compose
+creating container for flask and mysql 
+
+BUT:
+I have to manually create the database initialisation in shell
+docker exec -it flask_market-web-1 bash
+then manually run these files INSIDE container:
+python create_db.py
+python seed.py
