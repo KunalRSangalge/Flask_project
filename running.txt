@@ -7,3 +7,13 @@ docker exec -it flask_market-web-1 bash
 then manually run these files INSIDE container:
 python create_db.py
 python seed.py
+
+SOLUTION:
+create a init_db.py file and run before the run.py
+fixed problem of flask running before sql connection with wait-for-db.py file
+
+FLOW: to run on another pc
+will push branch to repo
+other pc : 
+will clone repo and run the compose, but the image will be pulled from docker-hub instead of 
+being built on local machine -> makes it instant (fast)
